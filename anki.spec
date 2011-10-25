@@ -2,7 +2,7 @@
 
 Name:		anki
 Version:	1.2.9
-Release:	%mkrel 1
+Release:	%mkrel 2
 Summary:	Flashcard program for using space repetition learning
 
 Group:		Education
@@ -17,13 +17,12 @@ Source1:	anki.svg
 Patch0:		anki-1.0-noupdate.patch
 # Avoid unicode error message on startup
 Patch1:		anki-1.2.9-unicode.patch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires:	python-devel, python-setuptools, python-sqlalchemy
 BuildRequires:	desktop-file-utils, PyQt4, python-simplejson
-Requires:	qt4, PyQt4
+Requires:	qt4-common, python-qt4
 Requires:	python-sqlalchemy, python-simplejson, python-sqlite2
 Requires:	python-matplotlib
-Requires:	pygame, python-BeautifulSoup
+Requires:	pygame, python-beautifulsoup
 Requires:	pyaudio, sox
 BuildArch:	noarch
 
