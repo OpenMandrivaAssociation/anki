@@ -1,8 +1,8 @@
 %{!?python_sitelib: %define python_sitelib %(%{__python} -c "from distutils.sysconfig import get_python_lib; print get_python_lib()")}
 
 Name:		anki
-Version:	1.2.9
-Release:	%mkrel 2
+Version:	1.2.11
+Release:	1
 Summary:	Flashcard program for using space repetition learning
 
 Group:		Education
