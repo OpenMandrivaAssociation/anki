@@ -15,8 +15,6 @@ Source1:	anki.svg
 
 # Config change: don't check for new updates.
 Patch0:		anki-1.0-noupdate.patch
-# Avoid unicode error message on startup
-Patch1:		anki-1.2.9-unicode.patch
 BuildRequires:	python-devel, python-setuptools, python-sqlalchemy
 BuildRequires:	desktop-file-utils, PyQt4, python-simplejson
 Requires:	qt4-common, python-qt4
@@ -34,7 +32,6 @@ as possible. Anki is based on a theory called spaced repetition.
 %prep
 %setup -q
 %patch0 -F 9 -p1 -b .noupdate
-%patch1 -p1 -b .unicode
 %{__sed} -i -e '/^#!\//, 1d' ankiqt/ui/dropbox.py
 
 %build
