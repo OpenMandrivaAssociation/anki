@@ -101,3 +101,19 @@ rm -rf %{buildroot}
 %{_bindir}/anki
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/pixmaps/%{name}.svg
+
+
+%changelog
+* Sat May 19 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.2.11-1
++ Revision: 799621
+- patch1 removed
+- version update 1.2.11
+
+* Tue Oct 25 2011 Alexander Barakin <abarakin@mandriva.org> 1.2.9-2
++ Revision: 707092
+- removed broken requirements
+
+* Mon Oct 24 2011 Alexander Barakin <abarakin@mandriva.org> 1.2.9-1
++ Revision: 705879
+- imported package anki
+
