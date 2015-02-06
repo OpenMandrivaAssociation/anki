@@ -2,7 +2,7 @@
 
 Name:		anki
 Version:	1.2.11
-Release:	1
+Release:	2
 Summary:	Flashcard program for using space repetition learning
 
 Group:		Education
