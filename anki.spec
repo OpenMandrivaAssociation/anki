@@ -17,7 +17,7 @@ Source1:	anki.svg
 Patch0:		anki-1.0-noupdate.patch
 BuildRequires:	python2-devel
 BuildRequires:	python2-setuptools
-BuildRequires:	python2-sqlalchemy
+BuildRequires:	python-sqlalchemy
 BuildRequires:	desktop-file-utils, PyQt4, python-simplejson
 Requires:	qt4-common, python-qt4
 Requires:	python-sqlalchemy, python-simplejson, python-sqlite2
