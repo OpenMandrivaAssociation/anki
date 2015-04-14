@@ -21,6 +21,7 @@ BuildRequires:	python2-sqlalchemy
 BuildRequires:	desktop-file-utils
 BuildRequires:	python2-qt4
 BuildRequires:	python2-simplejson
+BuildRequires:	python2-sip
 
 
 Requires:	qt4-common
