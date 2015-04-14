@@ -15,7 +15,9 @@ Source1:	anki.svg
 
 # Config change: don't check for new updates.
 Patch0:		anki-1.0-noupdate.patch
-BuildRequires:	python-devel, python-setuptools, python-sqlalchemy
+BuildRequires:	python2-devel
+BuildRequires:	python2-setuptools
+BuildRequires:	python2-sqlalchemy
 BuildRequires:	desktop-file-utils, PyQt4, python-simplejson
 Requires:	qt4-common, python-qt4
 Requires:	python-sqlalchemy, python-simplejson, python-sqlite2
@@ -36,19 +38,18 @@ as possible. Anki is based on a theory called spaced repetition.
 
 %build
 pushd libanki
-%{__python} setup.py build
+%{__python2} setup.py build
 popd
 
-%{__python} setup.py build
+%{__python2} setup.py build
 
 
 %install
-rm -rf %{buildroot}
 pushd libanki
-%{__python} setup.py install -O1 --skip-build --root %{buildroot}
+%{__python2} setup.py install -O1 --skip-build --root %{buildroot}
 popd
 
-%{__python} setup.py install -O1 --skip-build --root %{buildroot}
+%{__python2} setup.py install -O1 --skip-build --root %{buildroot}
 
 install -d %{buildroot}%{_datadir}/applications
 desktop-file-install \
@@ -68,52 +69,32 @@ s:%lang(C) ::
 /^$/d' > anki.lang
 
 
-
-%clean
-rm -rf %{buildroot}
-
-
 %files -f %{name}.lang
-%defattr(-,root,root,-)
 %doc ChangeLog
 %doc COPYING CREDITS README*
 # libankiqt
-%dir %{python_sitelib}/ankiqt
-%{python_sitelib}/ankiqt/*.py*
-%{python_sitelib}/ankiqt/ui
-%{python_sitelib}/ankiqt/forms
+%dir %{python2_sitelib}/ankiqt
+%{python2_sitelib}/ankiqt/*.py*
+%{python2_sitelib}/ankiqt/ui
+%{python2_sitelib}/ankiqt/forms
 
 # libanki
-%dir %{python_sitelib}/anki
-%{python_sitelib}/anki/*.py*
-%{python_sitelib}/anki/importing
-%{python_sitelib}/anki/template
+%dir %{python2_sitelib}/anki
+%{python2_sitelib}/anki/*.py*
+%{python2_sitelib}/anki/importing
+%{python2_sitelib}/anki/template
 
 # locale
-%dir %{python_sitelib}/ankiqt/locale/
-%dir %{python_sitelib}/ankiqt/locale/*
-%dir %{python_sitelib}/ankiqt/locale/*/LC_MESSAGES
-%dir %{python_sitelib}/anki/locale/
-%dir %{python_sitelib}/anki/locale/*
-%dir %{python_sitelib}/anki/locale/*/LC_MESSAGES
+%dir %{python2_sitelib}/ankiqt/locale/
+%dir %{python2_sitelib}/ankiqt/locale/*
+%dir %{python2_sitelib}/ankiqt/locale/*/LC_MESSAGES
+%dir %{python2_sitelib}/anki/locale/
+%dir %{python2_sitelib}/anki/locale/*
+%dir %{python2_sitelib}/anki/locale/*/LC_MESSAGES
 
-%{python_sitelib}/*egg-info
+%{python2_sitelib}/*egg-info
 %{_bindir}/anki
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/pixmaps/%{name}.svg
 
-
-%changelog
-* Sat May 19 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.2.11-1
-+ Revision: 799621
-- patch1 removed
-- version update 1.2.11
-
-* Tue Oct 25 2011 Alexander Barakin <abarakin@mandriva.org> 1.2.9-2
-+ Revision: 707092
-- removed broken requirements
-
-* Mon Oct 24 2011 Alexander Barakin <abarakin@mandriva.org> 1.2.9-1
-+ Revision: 705879
-- imported package anki
 
