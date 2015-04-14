@@ -19,7 +19,7 @@ BuildRequires:	python2-devel
 BuildRequires:	python2-setuptools
 BuildRequires:	python2-sqlalchemy
 BuildRequires:	desktop-file-utils
-BuildRequires:	PyQt4
+BuildRequires:	python2-qt4
 BuildRequires:	python2-simplejson
 
 
