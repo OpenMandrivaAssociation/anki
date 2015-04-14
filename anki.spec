@@ -18,12 +18,21 @@ Patch0:		anki-1.0-noupdate.patch
 BuildRequires:	python2-devel
 BuildRequires:	python2-setuptools
 BuildRequires:	python-sqlalchemy
-BuildRequires:	desktop-file-utils, PyQt4, python-simplejson
-Requires:	qt4-common, python-qt4
-Requires:	python-sqlalchemy, python-simplejson, python-sqlite2
+BuildRequires:	desktop-file-utils
+BuildRequires:	PyQt4
+BuildRequires:	python2-simplejson
+
+
+Requires:	qt4-common
+Requires:	python-qt4
+Requires:	python-sqlalchemy
+Requires:	python2-simplejson
+Requires:	python-sqlite2
 Requires:	python-matplotlib
-Requires:	pygame, python-beautifulsoup
-Requires:	pyaudio, sox
+Requires:	pygame
+Requires:	python-beautifulsoup
+Requires:	pyaudio
+Requires:	sox
 BuildArch:	noarch
 
 %description
