@@ -24,7 +24,7 @@ BuildRequires:	python2-simplejson
 
 
 Requires:	qt4-common
-Requires:	python-qt4
+Requires:	python2-qt4
 Requires:	python2-sqlalchemy
 Requires:	python2-simplejson
 Requires:	python-sqlite2
