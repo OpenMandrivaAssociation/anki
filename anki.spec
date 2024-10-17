@@ -9,7 +9,7 @@ Group:		Education
 # the file anki-%%{version}/libanki/anki/features/chinese/unihan.db 
 # was created out of  Unihan.txt from www.unicode.org (MIT license)
 License:	GPLv3+ and MIT
-URL:		http://ankisrs.net/
+URL:		https://ankisrs.net/
 Source0:	http://anki.googlecode.com/files/%{name}-%{version}.tgz
 Source1:	anki.svg
 
